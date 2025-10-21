@@ -17,7 +17,7 @@ const Cards = () => {
         setplans(updated)
     }
   return (
-    <section className="flex flex-row gap-5 items-center justify-center my-10">
+    <section className="flex flex-row flex-wrap gap-5 items-center justify-center my-10">
       {plans.map((plan, index) => (
         <motion.div
             whileHover={{scale: 1.01}}
@@ -25,7 +25,7 @@ const Cards = () => {
             key={index}
             onClick={() => handleActiveChange(index)}
           className={`flex flex-col rounded-3xl p-11 w-full max-w-md bg-white ${
-            plan.isActive === true ? "border border-fuchsia-500" : "border-none"
+            plan.isActive === true ? "border border-purple-500" : "border-none"
           } cursor-pointer relative`}
         >
           <div className={`absolute top-6 right-8 ${plan.isActive ? '' : 'hidden'}`}>
@@ -50,10 +50,10 @@ const Cards = () => {
             <motion.button
             whileHover={{scale: 1.03}}
             whileTap={{scale: 0.95}}
-              className={`border w-full rounded-[5px] border-fuchsia-500 px-4 py-2 ${
+              className={`border w-full rounded-[5px] border-purple-500 px-4 py-2 ${
                 plan.isActive
-                  ? "bg-fuchsia-500 text-white"
-                  : "bg-white text-fuchsia-500"
+                  ? "bg-purple-500 text-white"
+                  : "bg-white text-purple-500"
               }`}
             >
               Buy Plan
@@ -84,7 +84,7 @@ const Cards = () => {
                     />
                     <li className="my-2 text-[14px]">{item.title}</li>
                     <p
-                      className={`text-[12px] text-fuchsia-500 ml-3 ${
+                      className={`text-[12px] text-purple-500 ml-3 ${
                         item.boost ? "block" : "hidden"
                       }`}
                     >
