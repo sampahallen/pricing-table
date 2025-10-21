@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { pkg as initialpkg, cards, pkg } from "../constants"
+import { motion } from "motion/react";
+import { pkg as initialpkg, cards, } from "../constants"
 import tick from "../assets/greentick.png"
 import star from "../assets/star.png"
 
@@ -18,7 +19,9 @@ const Cards = () => {
   return (
     <section className="flex flex-row gap-5 items-center justify-center my-10">
       {plans.map((plan, index) => (
-        <div
+        <motion.div
+            whileHover={{scale: 1.01}}
+            whileTap={{scale: 0.95}}
             key={index}
             onClick={() => handleActiveChange(index)}
           className={`flex flex-col rounded-3xl p-11 w-full max-w-md bg-white ${
@@ -44,7 +47,9 @@ const Cards = () => {
             <h3 className="text-[30px] font-semibold ">{plan.price}</h3>
           </div>
           <div className="flex flex-col items-center justify-center mt-3">
-            <button
+            <motion.button
+            whileHover={{scale: 1.03}}
+            whileTap={{scale: 0.95}}
               className={`border w-full rounded-[5px] border-fuchsia-500 px-4 py-2 ${
                 plan.isActive
                   ? "bg-fuchsia-500 text-white"
@@ -52,7 +57,7 @@ const Cards = () => {
               }`}
             >
               Buy Plan
-            </button>
+            </motion.button>
 
             <div className="flex flex-row items-center justify-center gap-3">
               {cards.map((card) => (
@@ -93,7 +98,7 @@ const Cards = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </motion.div>
       ))}
     </section>
   );
