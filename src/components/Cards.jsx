@@ -28,8 +28,8 @@ const Cards = () => {
             plan.isActive === true ? "border-2 shadow-lg shadow-purple-500 border-purple-500" : "border-2"
           } cursor-pointer relative`}
         >
-          <div className={`absolute top-5 right-7 ${plan.isActive ? '' : 'hidden'}`}>
-            <img src={star} alt="" className="w-[40px] h-[40px] object-contain" />
+          <div className={`absolute top-4 right-5 ${plan.isActive ? '' : 'hidden'}`}>
+            <img src={star} alt="" className="w-[30px] h-[30px] object-contain" />
           </div>
           <div className="ml-9 my-5">
             <div className="flex flex-row gap-6 items-center">
