@@ -17,14 +17,14 @@ const Cards = () => {
         setplans(updated)
     }
   return (
-    <section className="flex flex-row flex-wrap gap-5 items-center justify-center my-10 sm:p-0 p-5">
+    <section className="flex flex-row flex-wrap gap-5 items-center justify-center my-10 sm: p-5">
       {plans.map((plan, index) => (
         <motion.div
             whileHover={{scale: 1.01}}
             whileTap={{scale: 0.95}}
             key={index}
             onClick={() => handleActiveChange(index)}
-          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[24%] bg-white ${
+          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[350px] sm:h-[900px] bg-white ${
             plan.isActive === true ? "border-2 shadow-lg shadow-purple-500 border-purple-500" : "border-2"
           } cursor-pointer relative`}
         >
@@ -64,7 +64,7 @@ const Cards = () => {
                 <img
                   src={card.image}
                   alt=""
-                  className="w-[50px] h-[50px] object-contain"
+                  className="sm:w-[50px] sm:h-[50px] w-[35px] h-[35px] object-contain"
                 />
               ))}
             </div>
