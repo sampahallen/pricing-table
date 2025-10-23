@@ -17,14 +17,14 @@ const Cards = () => {
         setplans(updated)
     }
   return (
-    <section className="flex flex-row flex-wrap gap-5 items-center justify-center my-10 sm: p-5">
+    <section className="flex flex-row flex-wrap gap-5 items-stretch justify-center my-10 sm: p-5">
       {plans.map((plan, index) => (
         <motion.div
             whileHover={{scale: 1.01}}
             whileTap={{scale: 0.95}}
             key={index}
             onClick={() => handleActiveChange(index)}
-          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[350px] sm:h-[1000px] bg-white ${
+          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[350px] sm:h-hit bg-white ${
             plan.isActive === true ? "border-2 shadow-lg shadow-purple-500 border-purple-500" : "border-2"
           } cursor-pointer relative`}
         >
