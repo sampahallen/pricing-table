@@ -24,7 +24,7 @@ const Cards = () => {
             whileTap={{scale: 0.95}}
             key={index}
             onClick={() => handleActiveChange(index)}
-          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[350px] sm:h-[900px] bg-white ${
+          className={`flex flex-col rounded-3xl p-11 w-full  sm:max-w-[350px] sm:h-[1000px] bg-white ${
             plan.isActive === true ? "border-2 shadow-lg shadow-purple-500 border-purple-500" : "border-2"
           } cursor-pointer relative`}
         >
